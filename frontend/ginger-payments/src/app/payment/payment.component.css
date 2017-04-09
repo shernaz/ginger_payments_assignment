@@ -1,0 +1,44 @@
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+
+body{
+  font-family: Open Sans;
+}
+h1 {
+  text-align: center;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  min-height: 800px;
+  background-color: rgb(128,222,234);
+}
+.aside-title {
+  padding: 20px 0;
+  background-color: rgb(96,125,139);
+  text-align: center;
+  color: white;
+}
+button {
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  background-color: rgb(0,61,159);
+}
+.mat-raised-button {
+  min-width: 220px;
+}
+main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+}
+section {
+  margin: 0 20px;
+}
+.select-method {
+  margin: 10px 0;
+}
+
