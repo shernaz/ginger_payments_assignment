@@ -47,22 +47,20 @@ export class PaymentComponent implements OnInit {
 
 
   callback() {
-    let cb = (function(data) { console.log(data); this.data = data; }).bind(this);
+    let cb = (function(data) { this.data = data; }).bind(this);
      this._paymentService.getPaymentData(null, 'amount', 'DESC', 20, cb);
   }
 
   promise() {
     this._paymentService.getPaymentData( [new Filter('merchant','Ginger')] )
-      .then(
-        value => this.data = value,
-        error => this.errorMessage = <any>error);
+      .then(response => this.data = response)
+      .catch(error => this.errorMessage = <any>error);
   }
 
   filterPayments() {
     this._paymentService.getPaymentData( [new Filter('method',this.selectedMethodValue)] )
-      .then(
-        value => this.data = value,
-        error => this.errorMessage = <any>error);
+      .then(response => this.data = response)
+      .catch(error => this.errorMessage = <any>error);
   }
 
   addPayment() {
@@ -74,6 +72,7 @@ export class PaymentComponent implements OnInit {
     payment.merchant = this.merchant;
     payment.created = Date.now().toString();
 
+    //uses Observable
     this._paymentService.addPaymentData(payment).subscribe(
       (data) => console.log(data)
     );
@@ -84,5 +83,3 @@ export class PaymentComponent implements OnInit {
   }
 
 }
-
-
