@@ -17,6 +17,8 @@ This is a solution for ginger payments javascript assignment.
 The add payment modal is not closed automatically, considering the intention of adding more payments.
 
 #ToDo:
-Replace alerts with notifications.
+Replace alerts with notifications. 
+
 Replace separate variables for the form with payment object.
+
 Add more e2e tests
