@@ -13,3 +13,6 @@ This is a solution for ginger payments javascript assignment.
 2. Goto backend, npm install && npm run start:api
 3. Goto frontend/ginger-payments, npm install && npm start
 4. To test e2e, npm e2e
+
+Note:
+The add payment modal is not closed automatically, considering the intention of adding more payments.
