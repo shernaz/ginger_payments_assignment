@@ -18,5 +18,7 @@ The add payment modal is not closed automatically, considering the intention of 
 
 #ToDo:
 Replace alerts with notifications.
+
 Replace separate variables for the form with payment object.
+
 Add more e2e tests
