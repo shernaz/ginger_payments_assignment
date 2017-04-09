@@ -120,7 +120,6 @@
           </label>
           <div class="input-group">
             <select class="form-control chosen-select" [(ngModel)]="selectedCurrency" style="width: 400px;" tabindex="2">
-              <option disabled hidden [value]="selectUndefinedOptionValue">--Choose Currency--</option>
               <option *ngFor="let curr of currency" [ngValue]="curr.value"> {{curr.displayName}}</option>
             </select>
           </div>
@@ -132,7 +131,6 @@
           </label>
           <div class="input-group">
             <select class="form-control chosen-select" [(ngModel)]="selectedMethod" style="width: 400px;" tabindex="2" >
-              <option disabled hidden [value]="selectUndefinedOptionValue">--Choose Method--</option>
               <option *ngFor="let method of methods" [ngValue]="method.value"> {{method.displayName}}</option>
             </select>
           </div>
@@ -144,7 +142,6 @@
           </label>
           <div class="input-group">
             <select class="form-control chosen-select" [(ngModel)]="selectedStatus" style="width:400px;" tabindex="2" >
-              <option disabled hidden [value]="selectUndefinedOptionValue">--Choose Status--</option>
               <option *ngFor="let statum of status" [ngValue]="statum.value"> {{statum.displayName}}</option>
             </select>
           </div>

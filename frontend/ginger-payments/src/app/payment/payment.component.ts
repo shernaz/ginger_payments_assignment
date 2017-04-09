@@ -14,10 +14,10 @@ export class PaymentComponent implements OnInit {
 
   errorMessage: string;
   selectedMethodValue: string;
-  selectedMethod: string;
-  amount: number;
-  selectedCurrency: string;
-  selectedStatus: string;
+  selectedMethod: string = "ideal";
+  amount: number = 0;
+  selectedCurrency: string = "EUR";
+  selectedStatus: string = "accepted";
   merchant: string;
   public data: Payment[];
   public filterQuery = "";
@@ -64,13 +64,18 @@ export class PaymentComponent implements OnInit {
   }
 
   addPayment() {
+    if(this.amount == null || this.amount == NaN || this.merchant == null || this.merchant.length ==0)
+      alert("amount and merchant is mandatory");
+
+
     let payment = new Payment();
+
     payment.amount = this.amount*100;
     payment.method = this.selectedMethod;
     payment.status = this.selectedStatus;
     payment.currency = this.selectedCurrency;
     payment.merchant = this.merchant;
-    payment.created = Date.now().toString();
+    payment.created = Date();
 
     //uses Observable
     this._paymentService.addPaymentData(payment).subscribe(
