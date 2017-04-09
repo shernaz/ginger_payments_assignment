@@ -8,12 +8,11 @@ describe('ginger-payments App', () => {
     page = new GingerPaymentsPage();
   });
 
+  //added e2e for callback function
   it('callback button brings 20 payments', () => {
     page.navigateTo();
-
     let button = element(by.css('#btn-callback'));
     button.click();
-
     let payments = element.all(by.css(".data-row"));
 
     //making sure there are no more pages
@@ -23,6 +22,7 @@ describe('ginger-payments App', () => {
     expect(payments.count()).toEqual(20);
   });
 
+  //added e2e for promise function
   it('promise button brings all Ginger payments', () => {
     page.navigateTo();
 
@@ -34,23 +34,9 @@ describe('ginger-payments App', () => {
     payments.count().then(function (count) {
       for(let i = 0; i < count; i++) {
         let payment_element = payments.get(i);
-
         let td = payment_element.element(by.css('#payment_merchant_id'));
-
         expect(td.getText()).toEqual("Ginger");
-
-        // payment_element.getText().then(function (item_txt) {
-        //   expect(item_txt)
-        //   console.log(item_txt);
-        // });
       }
-
     });
-
-
-
-
-
   });
-
 });
