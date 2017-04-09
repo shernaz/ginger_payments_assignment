@@ -67,9 +67,8 @@ export class PaymentComponent implements OnInit {
     if(this.amount == null || this.amount == NaN || this.merchant == null || this.merchant.length ==0)
       alert("amount and merchant is mandatory");
 
-
     let payment = new Payment();
-
+    
     payment.amount = this.amount*100;
     payment.method = this.selectedMethod;
     payment.status = this.selectedStatus;
@@ -79,7 +78,8 @@ export class PaymentComponent implements OnInit {
 
     //uses Observable
     this._paymentService.addPaymentData(payment).subscribe(
-      (data) => console.log(data)
+      (data) => alert("payment added."),
+      this.amount = null, this.merchant = null,
     );
   }
 
