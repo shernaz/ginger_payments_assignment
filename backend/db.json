@@ -4501,41 +4501,6 @@
       "merchant": "Ginger"
     },
     {
-      "amount": 0,
-      "method": "ideal",
-      "status": "accepted",
-      "currency": "EUR",
-      "created": 1491752142678,
-      "id": 501
-    },
-    {
-      "amount": 0,
-      "method": "ideal",
-      "status": "accepted",
-      "currency": "EUR",
-      "merchant": "shalu",
-      "created": 1491752154037,
-      "id": 502
-    },
-    {
-      "amount": 0,
-      "method": "ideal",
-      "status": "accepted",
-      "currency": "EUR",
-      "merchant": "shalu",
-      "created": 1491752157909,
-      "id": 503
-    },
-    {
-      "amount": 555555555500,
-      "method": "ideal",
-      "status": "accepted",
-      "currency": "EUR",
-      "merchant": "shalu",
-      "created": 1491752175678,
-      "id": 504
-    },
-    {
       "amount": 568600,
       "method": "ideal",
       "status": "accepted",
