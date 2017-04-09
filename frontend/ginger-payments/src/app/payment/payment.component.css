@@ -26,9 +26,6 @@ button {
   color: white;
   background-color: rgb(0,61,159);
 }
-.mat-raised-button {
-  min-width: 220px;
-}
 main {
   display: flex;
   width: 100%;
@@ -41,4 +38,14 @@ section {
 .select-method {
   margin: 10px 0;
 }
+.width-5 {
+  width: 5%;
+}
 
+.width-10 {
+  width: 10%;
+}
+
+.width-30 {
+  width: 30%;
+}

@@ -1,12 +1,12 @@
 <main>
   <aside>
     <span class="aside-title">Make your Choice</span>
-    <button id="btn-callback" (click)="callback()">Callback</button>
-    <button  id="btn-promise" (click)="promise()">Promise</button>
+    <button id="btn-callback" class="btn-primary" (click)="callback()">Callback</button>
+    <button id="btn-promise" class="btn-primary" (click)="promise()">Promise</button>
     <select [(ngModel)]="selectedMethodValue" (ngModelChange)="filterPayments()">
       <option *ngFor="let method of methods" [ngValue]="method.value"> {{method.displayName}}</option>
     </select>
-    <button  id="btn-add-payment" type="button" data-toggle="modal" data-target="#myModal">Add Payment</button>
+    <button id="btn-add-payment" class="btn-primary" type="button" data-toggle="modal" data-target="#myModal">Add Payment</button>
   </aside>
   <section>
     <!-- Payments Table -->
@@ -51,25 +51,25 @@
              [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
         <thead>
         <tr>
-          <th style="width: 5%">
+          <th class="width-5">
             <mfDefaultSorter by="id">Id</mfDefaultSorter>
           </th>
-          <th style="width: 10%">
+          <th class="width-10">
             <mfDefaultSorter by="method">Method</mfDefaultSorter>
           </th>
-          <th style="width: 10%" title="Amount in Cents">
+          <th class="width-10" title="Amount in Cents">
             <mfDefaultSorter by="amount">Amount</mfDefaultSorter>
           </th>
-          <th style="width: 10%">
+          <th class="width-10">
             <mfDefaultSorter by="currency">Currency</mfDefaultSorter>
           </th>
-          <th style="width: 30%">
+          <th class="width-30">
             <mfDefaultSorter by="created">Created</mfDefaultSorter>
           </th>
-          <th style="width: 10%">
+          <th class="width-10">
             <mfDefaultSorter by="status">Status</mfDefaultSorter>
           </th>
-          <th style="width: 10%">
+          <th class="width-10">
             <mfDefaultSorter by="merchant">Merchant</mfDefaultSorter>
           </th>
         </tr>
